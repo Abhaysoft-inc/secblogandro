@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create New Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input [(ngModel)]="newPost.title" name="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Content</ion-label>
+      <!-- <div [appSummernote]="summernoteOptions" [(ngModel)]="newPost.content"></div> -->
+
+
+      <ion-textarea [(ngModel)]="newPost.content" name="content"></ion-textarea>
+      <!-- <quill-editor [(ngModel)]="newPost.content"></quill-editor> -->
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="submitNewPost()">Submit</ion-button>
+</ion-content>
